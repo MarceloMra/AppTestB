@@ -50,9 +50,10 @@ public class MainActivity extends AppCompatActivity implements RecebedorMensagen
         layoutManager.setStackFromEnd(true);
         rvMensagens.setLayoutManager(layoutManager);
 
-        patternComunicationObject = new MyReqReplyObject(Comportamento.REQUESTER, this);
-        nearbyAccessObject = new NearbyAccessObject(patternComunicationObject, "nicknameB");
-
+        patternComunicationObject = new MyReqReplyObject(Comportamento.REPLYER, this);
+        nearbyAccessObject = new NearbyAccessObject(patternComunicationObject, "nicknameb");
+        patternComunicationObject.setNearbyAccessObject(nearbyAccessObject);
+        patternComunicationObject.startAdvertising();
         btnEnviar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -22,11 +22,13 @@ public class MyReqReplyObject extends ReqReplyObject {
     @Override
     protected void novaConexaoEfetuada(EndpointInfo endpointInfo) {
         Toast.makeText(GlobalApplication.getContext().getApplicationContext(), "Nova conexão : "+endpointInfo.getComportamento()+" : "+endpointInfo.getEndpointID(), Toast.LENGTH_LONG).show();
+        recebedorMensagens.receberEndpointID(endpointInfo.getEndpointID());
     }
 
     @Override
     protected void conexaoEncerrada(EndpointInfo endpointInfo) {
         Toast.makeText(GlobalApplication.getContext().getApplicationContext(), "Conexão Encerrada : "+endpointInfo.getComportamento()+" : "+endpointInfo.getEndpointID(), Toast.LENGTH_LONG).show();
+        recebedorMensagens.receberEndpointID(null);
     }
 
     @Override
