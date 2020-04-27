@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">AppTestB</string>
+    <string name="service_id">com.appstest</string>
+</resources>
