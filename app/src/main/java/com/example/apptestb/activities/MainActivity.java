@@ -12,14 +12,14 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.apptestb.R;
-import com.example.apptestb.enums.Comportamento;
-import com.example.apptestb.improvement.GlobalApplication;
-import com.example.apptestb.improvement.NearbyAccessObject;
-import com.example.apptestb.improvement.PatternComunicationObject;
 import com.example.apptestb.interfaces.RecebedorMensagens;
 import com.example.apptestb.model.AdapterMensagens;
 import com.example.apptestb.model.Mensagem;
 import com.example.apptestb.model.MyReqReplyObject;
+import com.example.nearbyfenix.enums.Comportamento;
+import com.example.nearbyfenix.improvement.GlobalApplication;
+import com.example.nearbyfenix.improvement.NearbyAccessObject;
+import com.example.nearbyfenix.improvement.PatternComunicationObject;
 
 import java.util.ArrayList;
 
@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity implements RecebedorMensagen
         rvMensagens.setLayoutManager(layoutManager);
 
         patternComunicationObject = new MyReqReplyObject(Comportamento.REPLYER, this);
-        nearbyAccessObject = new NearbyAccessObject(patternComunicationObject, "nicknameb");
+        nearbyAccessObject = new NearbyAccessObject(patternComunicationObject, "nicknameb", GlobalApplication.getContext().getApplicationContext().getString(R.string.service_id));
         patternComunicationObject.setNearbyAccessObject(nearbyAccessObject);
         patternComunicationObject.startAdvertising();
         btnEnviar.setOnClickListener(new View.OnClickListener() {

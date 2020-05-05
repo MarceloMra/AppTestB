@@ -2,12 +2,11 @@ package com.example.apptestb.model;
 
 import android.widget.Toast;
 
-import com.example.apptestb.activities.MainActivity;
-import com.example.apptestb.enums.Comportamento;
-import com.example.apptestb.improvement.EndpointInfo;
-import com.example.apptestb.improvement.GlobalApplication;
-import com.example.apptestb.improvement.ReqReplyObject;
 import com.example.apptestb.interfaces.RecebedorMensagens;
+import com.example.nearbyfenix.enums.Comportamento;
+import com.example.nearbyfenix.improvement.EndpointInfo;
+import com.example.nearbyfenix.improvement.GlobalApplication;
+import com.example.nearbyfenix.improvement.ReqReplyObject;
 
 import java.nio.charset.StandardCharsets;
 
